@@ -350,19 +350,36 @@
           </div>
         </div>
       </section> -->
-      <section id="chatbot">
-        <div id="chat-container">
-          <div id="messages"></div>
-          <div id="chat-input">
+      <section id="chatbot" class="chatbot-section">
+        <div id="chat-container" class="chat-container">
+          <div class="chat-header">
+            <div class="chat-avatar">
+              <i class="fas fa-robot"></i>
+            </div>
+            <h2>StudySphere AI</h2>
+            <div class="connection-status">
+              <span class="status-dot"></span>
+              <span>Connected</span>
+            </div>
+          </div>
+
+          <div id="messages" class="messages-container"></div>
+
+          <div id="chat-input" class="input-container">
             <input
               type="text"
               id="input-message"
-              placeholder="Type a message..."
+              placeholder="Ask about StudySphere..."
+              class="message-input"
             />
-            <button onclick="sendMessage()">Send</button>
+            <button onclick="sendMessage()" class="send-button">
+              <i class="fas fa-paper-plane"></i>
+            </button>
           </div>
         </div>
       </section>
+
+      <!-- Font Awesome for icons -->
 
       //
       <section class="contact-section">
