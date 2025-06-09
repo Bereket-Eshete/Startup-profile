@@ -192,7 +192,169 @@
   padding: 0.6rem;
   border: none;
 }
+/* Base mobile styles */
+.products-section {
+  padding: 2rem 1rem;
+}
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.products-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #696868;
+  margin-bottom: 2rem;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.product-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.product-icon {
+  font-size: 2.5rem;
+  color: #fbbc05;
+  margin-bottom: 1.5rem;
+}
+
+.product-card h3 {
+  color: #2563eb;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.product-card p {
+  color: #4b5563;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+.audience-section {
+  padding: 2rem 1rem;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.audience-section h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #696868;
+  margin-bottom: 0.2rem;
+  margin-top: 0.4rem;
+}
+.toggle-container {
+  display: flex;
+  justify-content: center;
+  margin: 0rem auto 0rem;
+  width: 100%;
+}
+.toggle-switch {
+  position: relative;
+  display: flex;
+  width: 280px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border: 1px solid rgba(105, 104, 104, 0.2);
+}
+.toggle-option {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: #696868;
+  z-index: 2;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  user-select: none;
+}
+.toggle-option.active {
+  font-weight: 700;
+  color: #696868;
+}
+
+.toggle-slider {
+  position: absolute;
+  width: 50%;
+  height: calc(100% - 10px);
+  background: rgba(251, 188, 5, 0.2);
+  border-radius: 30px;
+  left: 5px;
+  top: 5px;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.content-container {
+  position: relative;
+  min-height: 400px;
+}
+.audience-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.audience-content.active {
+  position: relative;
+  opacity: 1;
+  visibility: visible;
+}
+.feature-card {
+  flex: 1;
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+.feature-card i {
+  font-size: 2.5rem;
+  color: #fbbc05;
+  margin-bottom: 1.5rem;
+}
+.feature-card h3 {
+  color: #2563eb;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+.feature-card p {
+  color: #4b5563;
+  line-height: 1.6;
+  font-size: 1rem;
+}
 @media (min-width: 768px) {
   .menu-icon {
     display: none;
@@ -215,7 +377,7 @@
         rgba(192, 174, 174, 0.2)
       ),
       url("../assets/studysphere.jpg");
-    padding-top: 80px; /* Slightly larger header on tablet */
+    padding-top: 80px;
   }
   .hero-content {
     margin-top: 80px;
@@ -230,7 +392,7 @@
   .content-1,
   .content-2 {
     flex-direction: row;
-    align-items: flex-start; /* Align items to top */
+    align-items: flex-start;
     gap: 3rem;
   }
 
@@ -245,13 +407,48 @@
   .text-content {
     flex: 1;
     order: unset;
-    align-self: center; /* Center align text vertically */
+    align-self: center;
   }
 
   .about-img {
     flex: 1;
-    height: 300px; /* Slightly larger on tablet */
-    max-width: 50%; /* Prevent images from growing too large */
+    height: 300px;
+    max-width: 50%;
     order: unset;
+  }
+  .products-section {
+    padding: 3rem 2rem;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .audience-content {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .feature-card {
+    flex: 1 1 calc(50% - 1rem);
+    min-width: 0;
+  }
+}
+@media (min-width: 1024px) {
+  .products-section {
+    padding: 4rem 2rem;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+
+  .product-card {
+    padding: 2.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .feature-card {
+    flex: 1 1 calc(33.333% - 1.5rem);
   }
 }
