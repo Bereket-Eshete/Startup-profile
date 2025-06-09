@@ -39,3 +39,30 @@ document.addEventListener("click", (event) => {
     menuIcon.classList.add("fa-bars");
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const faqItems = document.querySelectorAll(".faq-item");
+  let currentlyActive = null;
+
+  faqItems.forEach((item) => {
+    const question = item.querySelector(".faq-question");
+
+    question.addEventListener("click", function () {
+      // If this item is already active, close it
+      if (item.classList.contains("active")) {
+        item.classList.remove("active");
+        currentlyActive = null;
+        return;
+      }
+
+      // Close any currently open item
+      if (currentlyActive) {
+        currentlyActive.classList.remove("active");
+      }
+
+      // Open this item
+      item.classList.add("active");
+      currentlyActive = item;
+    });
+  });
+});
