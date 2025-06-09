@@ -17,13 +17,27 @@
         <span class="book"><i class="fas fa-book-open"></i></span>
         <p>StudySphere</p>
       </div>
+      <!-- nav links for desktop user-->
       <nav class="nav-link">
-        <a href="#">Home</a>
-        <a href="#">About Us</a>
-        <a href="#">Contact</a>
-        <a href="#">Features</a>
+        <a href="">Home</a>
+        <a href="">About us</a>
+        <a href="">Contact</a>
+        <a href="">Features</a>
       </nav>
-      <button class="menu-icon" onclick="toggleMobileMenu()">&#9776;</button>
+      <button class="menu-icon" id="menuToggle">
+        <i class="fas fa-bars"></i>
+      </button>
     </header>
+
+    <!-- Mobile menu overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenu">
+      <nav class="mobile-nav">
+        <a href="">Home</a>
+        <a href="">About us</a>
+        <a href="">Contact</a>
+        <a href="">Features</a>
+      </nav>
+    </div>
+    <script src="script/script.js"></script>
   </body>
 </html>
