@@ -635,3 +635,251 @@
     padding: 3rem 2rem;
   }
 }
+/* Brand Bar Section */
+.brand-bar-section {
+  padding: 1.5rem 0;
+  background-color: #2563eb; /* StudySphere blue */
+  color: white;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.brand-bar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.brand-bar {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-bottom: 1rem;
+}
+
+.brand-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.slogan-item {
+  scroll-snap-align: start;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0 1rem;
+  position: relative;
+  white-space: nowrap;
+  color: white; /* Always white text */
+  opacity: 0.9; /* Slightly transparent by default */
+  transition: all 0.3s ease;
+}
+
+.slogan-item:not(:last-child)::after {
+  content: "•";
+  position: absolute;
+  right: -1.25rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Hover Effects */
+.slogan-item:hover {
+  opacity: 1;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+/* Active item effect */
+.slogan-item.active {
+  color: #fbbc05; /* StudySphere yellow */
+  opacity: 1;
+  font-weight: 700;
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+  .brand-bar {
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow-x: visible;
+    scroll-snap-type: none;
+    gap: 3rem;
+  }
+
+  .slogan-item {
+    font-size: 1.8rem;
+    white-space: normal;
+  }
+
+  .slogan-item:not(:last-child)::after {
+    right: -1.75rem;
+  }
+}
+/* Container Styling */
+.chatbot-container {
+  max-width: 500px;
+  margin: 2rem auto;
+  background: #f8f2f2;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  font-family: "Segoe UI", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Styling */
+.chat-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.chat-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.chat-header h2 {
+  margin: 0.5rem 0 0;
+  font-weight: 600;
+}
+
+/* Chat Window Styling */
+.chat-window {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  min-height: 200px;
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  border: 1px solid #ddd;
+}
+
+/* Chat Bubble Base */
+.chat-bubble {
+  max-width: 80%;
+  padding: 0.75rem 1rem;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+/* Bot Bubble */
+.chat-bubble.bot {
+  background-color: #e0e7ff;
+  align-self: flex-start;
+  border-bottom-left-radius: 0;
+}
+
+/* User Bubble */
+.chat-bubble.user {
+  background-color: #c7f0db;
+  align-self: flex-end;
+  border-bottom-right-radius: 0;
+}
+
+/* Input Area */
+.chat-input-area {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.chat-input {
+  flex-grow: 1;
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.send-button {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #2563eb;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.send-button:hover {
+  transform: scale(1.1);
+}
+.contact-section {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #f3f4f6;
+  border-radius: 12px;
+  font-family: "Segoe UI", sans-serif;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.contact-section h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #111827;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #374151;
+  font-weight: 600;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+button[type="submit"] {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #1e40af;
+}
+
+.error-message {
+  color: #dc2626;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: block;
+}
