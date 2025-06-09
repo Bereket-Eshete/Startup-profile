@@ -11,31 +11,27 @@
     />
   </head>
   <body>
-    <!-- Header section -->
     <header class="header">
       <div class="log">
         <span class="book"><i class="fas fa-book-open"></i></span>
         <p>StudySphere</p>
       </div>
-      <!-- nav links for desktop user-->
       <nav class="nav-link">
         <a href="">Home</a>
-        <a href="">About us</a>
-        <a href="">Contact</a>
-        <a href="">Features</a>
+        <a href="#about">About us</a>
+        <a href="#contact">Contact</a>
+        <a href="#features">Features</a>
       </nav>
       <button class="menu-icon" id="menuToggle">
         <i class="fas fa-bars"></i>
       </button>
     </header>
-
-    <!-- Mobile menu overlay -->
     <div class="mobile-menu-overlay" id="mobileMenu">
       <nav class="mobile-nav">
-        <a href="">Home</a>
-        <a href="">About us</a>
-        <a href="">Contact</a>
-        <a href="">Features</a>
+        <a href="#">Home</a>
+        <a href="#about">About us</a>
+        <a href="#contact">Contact</a>
+        <a href="#features">Features</a>
       </nav>
     </div>
     <section class="hero-section">
@@ -49,7 +45,7 @@
       </div>
     </section>
     <main>
-      <section class="about-section">
+      <section class="about-section" id="about">
         <h2>About Us</h2>
         <div class="container">
           <div class="row1">
@@ -72,7 +68,6 @@
               />
             </div>
           </div>
-
           <div class="row2">
             <div class="content-2">
               <div class="text-content">
@@ -96,10 +91,9 @@
           </div>
         </div>
       </section>
-      <section class="products-section">
+      <section class="products-section" id="features">
         <div class="container">
           <h2>What We Offer</h2>
-
           <div class="products-grid">
             <!-- StudyPods Card -->
             <div class="product-card">
@@ -112,8 +106,6 @@
                 whiteboards, note repositories, and AI-powered Q&A chats.
               </p>
             </div>
-
-            <!-- StudyPlanner Card -->
             <div class="product-card">
               <div class="product-icon">
                 <i class="fas fa-calendar-alt"></i>
@@ -125,7 +117,6 @@
               </p>
             </div>
 
-            <!-- Reward Hub Card -->
             <div class="product-card">
               <div class="product-icon">
                 <i class="fas fa-trophy"></i>
@@ -153,7 +144,6 @@
               </div>
             </div>
           </div>
-
           <div class="content-container">
             <!-- Student Content -->
             <div class="audience-content active" id="students-content">
@@ -182,8 +172,6 @@
                 </p>
               </div>
             </div>
-
-            <!-- Mentor Content -->
             <div class="audience-content" id="mentors-content">
               <div class="feature-card">
                 <i class="fas fa-chalkboard-teacher"></i>
@@ -270,11 +258,10 @@
           <h2>Meet the Team</h2>
 
           <div class="team-grid">
-            <!-- Team Member 1 -->
             <div class="team-card">
               <div class="team-image">
                 <img
-                  src="./assets/jason-leung-81rOS-jYoJ8-unsplash.jpg"
+                  src="./assets/janko-ferlic-G-jo31ESuRE-unsplash.jpg"
                   alt="Bereket Eshete"
                 />
               </div>
@@ -288,8 +275,6 @@
                 </p>
               </div>
             </div>
-
-            <!-- Team Member 2 -->
             <div class="team-card">
               <div class="team-image">
                 <img
@@ -307,8 +292,6 @@
                 </p>
               </div>
             </div>
-
-            <!-- Team Member 3 -->
             <div class="team-card">
               <div class="team-image">
                 <img
@@ -329,60 +312,61 @@
           </div>
         </div>
       </section>
-      <!-- <section class="brand-bar-section">
+      <section class="brand-bar-section">
         <div class="brand-bar-container">
-          <div class="brand-bar">
-            <div class="slogan-item">
-              <span>Collaborative</span>
-            </div>
-            <div class="slogan-item">
-              <span>Empowering</span>
-            </div>
-            <div class="slogan-item">
-              <span>Innovative</span>
-            </div>
-            <div class="slogan-item">
-              <span>Rewarding</span>
-            </div>
-            <div class="slogan-item">
-              <span>Inclusive</span>
-            </div>
-          </div>
-        </div>
-      </section> -->
-      <section id="chatbot" class="chatbot-section">
-        <div id="chat-container" class="chat-container">
-          <div class="chat-header">
-            <div class="chat-avatar">
-              <i class="fas fa-robot"></i>
-            </div>
-            <h2>StudySphere AI</h2>
-            <div class="connection-status">
-              <span class="status-dot"></span>
-              <span>Connected</span>
-            </div>
-          </div>
-
-          <div id="messages" class="messages-container"></div>
-
-          <div id="chat-input" class="input-container">
-            <input
-              type="text"
-              id="input-message"
-              placeholder="Ask about StudySphere..."
-              class="message-input"
-            />
-            <button onclick="sendMessage()" class="send-button">
-              <i class="fas fa-paper-plane"></i>
-            </button>
-          </div>
+          <div>Collabotation</div>
+          <div>Focused</div>
+          <div>Motivated</div>
         </div>
       </section>
+      <section class="chatbot-container">
+        <div class="chat-header">
+          <img
+            src="./assets/jason-leung-81rOS-jYoJ8-unsplash.jpg"
+            alt="AI Avatar"
+            class="chat-avatar"
+          />
+          <h2>AI Assistant</h2>
+        </div>
+        <p class="chat-instructions">
+          Ask our AI about our story, services, or how you can get involved.
+        </p>
 
-      <!-- Font Awesome for icons -->
+        <div class="sample-questions">
+          <button onclick="setSampleQuestion('Who founded StudySphere?')">
+            Who founded StudySphere?
+          </button>
+          <button
+            onclick="setSampleQuestion('What services does StudySphere offer?')"
+          >
+            What services does StudySphere offer?
+          </button>
+          <button onclick="setSampleQuestion('What is StudySphere’s mission?')">
+            What is StudySphere’s mission?
+          </button>
+          <button onclick="setSampleQuestion('How can I support the team?')">
+            How can I support the team?
+          </button>
+          <button onclick="setSampleQuestion('What is your long-term vision?')">
+            What is your long-term vision?
+          </button>
+        </div>
 
-      //
-      <section class="contact-section">
+        <div class="chat-window" id="messages">
+          <div class="chat-bubble bot">Hello! How can I assist you today?</div>
+        </div>
+
+        <div class="chat-input-area">
+          <input
+            type="text"
+            id="input-message"
+            placeholder="Type your question here..."
+            class="chat-input"
+          />
+          <button class="send-button" onclick="sendMessage()">&#10148;</button>
+        </div>
+      </section>
+      <section class="contact-section" id="contact">
         <h2>Contact Us</h2>
         <form id="contactForm" novalidate>
           <div class="form-group">
@@ -406,53 +390,64 @@
           <button type="submit">Send Message</button>
         </form>
       </section>
-      <footer class="site-footer">
-        <div class="footer-container">
-          <div class="footer-top">
-            <h3>Empowering Students Everywhere</h3>
-            <div class="visitor-counter">
-              <span class="counter-number">100</span>
-              <span class="counter-label">Visitors</span>
-            </div>
-          </div>
-
-          <div class="footer-divider"></div>
-
-          <div class="footer-middle">
-            <div class="social-links">
-              <h4>Follow Us</h4>
-              <div class="social-icons">
-                <a href="#" aria-label="GitHub">
-                  <i class="fab fa-github"></i>
-                </a>
-                <a href="#" aria-label="LinkedIn">
-                  <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="#" aria-label="Twitter">
-                  <i class="fab fa-twitter"></i>
-                </a>
-                <a href="#" aria-label="Instagram">
-                  <i class="fab fa-instagram"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="footer-bottom">
-            <p>©2025 All rights reserved | StudySphere</p>
-            <div class="footer-links">
-              <a href="#">Privacy Policy</a>
-              <a href="#">Terms of Service</a>
-              <a href="#">Contact Us</a>
-            </div>
-          </div>
-        </div>
-      </footer>
     </main>
+    <footer class="study-footer">
+      <div class="footer-content">
+        <div class="footer-heading">
+          <h2>Empowering Students EveryWhere</h2>
+        </div>
+
+        <div class="visitor-counter">
+          <span class="visitor-label">Visit</span>
+          <span class="visitor-number" id="visitor-count">0</span>
+        </div>
+
+        <div class="social-links">
+          <a
+            href="https://github.com/studysphere"
+            target="_blank"
+            aria-label="GitHub"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="https://linkedin.com/company/studysphere"
+            target="_blank"
+            aria-label="LinkedIn"
+          >
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a
+            href="https://twitter.com/studysphere"
+            target="_blank"
+            aria-label="Twitter"
+          >
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a
+            href="https://instagram.com/studysphere"
+            target="_blank"
+            aria-label="Instagram"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="copyright">
+          <p>©2025 All rights reserved | StudySphere</p>
+        </div>
+      </div>
+    </footer>
+    <button id="back-to-top" aria-label="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
     <script src="script/script.js"></script>
     <script src="script/toggleSwitch.js"></script>
     <script src="script/contact.js"></script>
     <script src="https://js.puter.com/v2/"></script>
     <script src="script/chatbot.js"></script>
+    <script src="script/visitCount.js"></script>
   </body>
 </html>
