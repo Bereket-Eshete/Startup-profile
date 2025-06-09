@@ -92,7 +92,49 @@
   background-color: #f8f8f8;
   padding-left: 1.2rem;
 }
-
+.hero-section {
+  width: 100%;
+  min-height: 70svh; /* Uses small viewport height for mobile */
+  padding: 70px 20px 20px; /* Top padding matches header height */
+  display: flex;
+  position: relative;
+  background: linear-gradient(rgba(10, 10, 10, 0.3), rgba(0, 0, 0, 0)),
+    url("../assets/studysphere.jpg") center/cover no-repeat;
+  overflow: hidden;
+}
+.hero-content {
+  width: 100%;
+  background: transparent;
+  max-width: 100%;
+  padding: 20px;
+  display: inline-block;
+  margin-top: 160px;
+  z-index: 2;
+}
+.hero-content h1 {
+  color: white;
+  background: transparent;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+.hero-content p {
+  background-color: transparent;
+  color: #4285f4;
+  font-size: 1rem;
+  padding-bottom: 0.5rem;
+}
+.hero-btn {
+  cursor: pointer;
+  padding: 0.8rem 1rem;
+  background-color: #fbbc05;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-top: 0.6rem;
+  border: none;
+}
 @media (min-width: 768px) {
   .menu-icon {
     display: none;
@@ -107,5 +149,20 @@
   }
   .mobile-menu-overlay {
     display: none;
+  }
+  .hero-section {
+    min-height: 100vh;
+    background-image: linear-gradient(
+        rgba(10, 10, 10, 0.3),
+        rgba(192, 174, 174, 0.2)
+      ),
+      url("../assets/studysphere.jpg");
+    padding-top: 80px; /* Slightly larger header on tablet */
+  }
+  .hero-content {
+    margin-top: 80px;
+  }
+  .hero-content h1 {
+    font-size: 2.5rem;
   }
 }
