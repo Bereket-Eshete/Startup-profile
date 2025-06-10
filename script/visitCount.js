@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Get the visitor count element
   const visitorCountElement = document.getElementById("visitor-count");
 
   function updateVisitorCount() {

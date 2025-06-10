@@ -1,7 +1,6 @@
 document.getElementById("contactForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
-  // Reset errors
   document.getElementById("nameError").textContent = "";
   document.getElementById("emailError").textContent = "";
   document.getElementById("messageError").textContent = "";
@@ -12,13 +11,11 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
 
   let isValid = true;
 
-  // Name validation
   if (name === "") {
     document.getElementById("nameError").textContent = "Name is required.";
     isValid = false;
   }
 
-  // Email validation
   if (email === "") {
     document.getElementById("emailError").textContent = "Email is required.";
     isValid = false;
@@ -27,16 +24,13 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
       "Enter a valid email address.";
     isValid = false;
   }
-
-  // Message validation
   if (message === "") {
     document.getElementById("messageError").textContent =
       "Message is required.";
     isValid = false;
   }
-
   if (isValid) {
-    alert("Thank you! Your message has been submitted (mock alert).");
-    this.reset(); // Clear form
+    alert("Thank you! Your message has been submitted.");
+    this.reset();
   }
 });
