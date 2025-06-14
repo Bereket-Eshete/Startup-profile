@@ -1,4 +1,4 @@
-// Updated JavaScript
+
 document.addEventListener("DOMContentLoaded", function () {
   const studentContent = document.getElementById("students-content");
   const mentorContent = document.getElementById("mentors-content");

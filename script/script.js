@@ -34,6 +34,7 @@ document.addEventListener("click", (event) => {
     menuIcon.classList.add("fa-bars");
   }
 });
+//faq
 document.addEventListener("DOMContentLoaded", function () {
   const faqItems = document.querySelectorAll(".faq-item");
   let currentlyActive = null;
@@ -54,37 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-
-document.addEventListener("DOMContentLoaded", function () {
-  const brandBar = document.querySelector(".brand-bar");
-  const slogans = document.querySelectorAll(".slogan-item");
-  setInterval(() => {
-    slogans.forEach((slogan) => slogan.classList.remove("active"));
-    const randomIndex = Math.floor(Math.random() * slogans.length);
-    slogans[randomIndex].classList.add("active");
-  }, 2000);
-
-  if (window.innerWidth < 768) {
-    slogans.forEach((slogan) => {
-      const clone = slogan.cloneNode(true);
-      brandBar.appendChild(clone);
-    });
-
-    let scrollPosition = 0;
-    const scrollSpeed = 0.5;
-
-    function animateScroll() {
-      scrollPosition += scrollSpeed;
-      if (scrollPosition >= brandBar.scrollWidth / 2) {
-        scrollPosition = 0;
-      }
-      brandBar.scrollLeft = scrollPosition;
-      requestAnimationFrame(animateScroll);
-    }
-
-    setTimeout(animateScroll, 1000);
-  }
-});
+//backtoTop
 document.addEventListener("DOMContentLoaded", function () {
   const backToTopButton = document.getElementById("back-to-top");
 

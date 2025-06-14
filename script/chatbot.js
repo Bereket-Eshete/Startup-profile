@@ -50,8 +50,9 @@ function showTyping() {
 function sendMessage() {
   const input = document.getElementById("input-message");
   const text = input.value.trim();
-  if (!text) return;
-
+  if (!text) {
+    return;
+  }
   addMessage(text, "user");
   input.value = "";
   messages.push({ role: "user", content: text });
